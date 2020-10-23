@@ -28,7 +28,7 @@
                                         <td class="text-center">{{ $r->tipo }}</td>
                                         <td class="text-center">{{ $r->monto }}</td>
                                         <td class="text-center">
-                                            <img class="rounded" src="images/movs/{{$r->comprobante}}" alt="" height="40">
+                                            <img class="rounded" src="images/movs/{{$r->comprobante ? $r->comprobante:'default.png'}}" alt="" height="50">
                                         </td>
                                         <td class="text-center">{{$r->created_at}}</td>
                                         <td class="text-center">

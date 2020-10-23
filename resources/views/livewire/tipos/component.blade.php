@@ -31,11 +31,7 @@
                                 <td class="text-center"><p class="mb-0">{{$r->id}}</p></td>
                                 <td>{{$r->descripcion}}</td>
                                 <td class="text-center">
-                                    @if(is_null($r->image))
-                                        <img alt="{{ $r->descripcion }}" src="https://ui-avatars.com/api/?name={{ $r->descripcion }}&size=100" width="25%">
-                                    @else
-                                        <img class="rounded" src="images/tipos/{{$r->imagen}}" alt="" height="40">
-                                    @endif
+                                    <img class="rounded" src="images/tipos/{{$r->imagen ? $r->imagen:'default.png'}}" alt="" height="40" width="25%">
                                 </td>
                                 <td class="text-center">
                                     @include('common.actions') <!-- botons editar y eliminar -->

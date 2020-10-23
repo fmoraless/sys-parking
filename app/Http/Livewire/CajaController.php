@@ -33,7 +33,7 @@ class CajaController extends Component
         //Cuando el usuario no teclea nada
         else {
             $caja = Caja::leftjoin('users as u', 'u.id', 'cajas.user_id')
-                ->select('cajas.*', 'u.name')
+                ->select('cajas.*', 'u.nombre')
                 ->orderBy('id', 'desc')
                 ->paginate($this->pagination);
 
