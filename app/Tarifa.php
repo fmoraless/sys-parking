@@ -17,4 +17,13 @@ class Tarifa extends Model
     ];
 
     //Funciones y relaciones
+    public function rentas()
+    {
+        return $this->hasMany(Renta::class);
+    }
+
+    public function tipo()
+    {
+        return $this->HasOne(Tipo::class, 'id', 'tipo_id');
+    }
 }

@@ -37,6 +37,9 @@ class CreateRentasTable extends Migration
             $table->unsignedBigInteger('tarifa_id');
             $table->foreign('tarifa_id')->references('id')->on('tarifas');
 
+            $table->unsignedBigInteger('cajon_id');
+            $table->foreign('cajon_id')->references('id')->on('cajones');
+
             $table->string('barcode',25)->nullable();
             $table->enum('estatus',['ABIERTO','CERRADO'])->default('ABIERTO');
 

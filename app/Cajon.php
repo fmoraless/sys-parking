@@ -8,7 +8,11 @@ class Cajon extends Model
 {
     protected $table = 'cajones';
 
-    protected $fillable = ['descripcion', 'tipo_id', 'estatus'];
+    protected $fillable = [
+        'descripcion',
+        'tipo_id',
+        'estatus'
+    ];
 
     //Relaciones entre cajones y tipos
 

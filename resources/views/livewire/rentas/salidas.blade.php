@@ -1,4 +1,4 @@
-<secton id="salidas">
+<secton id="Salidas">
     <div class="row-layout-top-spacing">
         <div class="col-xm-12 col-lg-12 col-sm-12 col-md-12 layout-spacing">
             <div class="widget-content-area br-4">
@@ -27,7 +27,7 @@
                                 <small class="text-danger">{{$error}}</small>
                                 @endforeach
                             @endif
-                            <div class="input-group mb-4">
+                            <div class="input-group mb-4 mt-4">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">
                                         <i class="la la-barcode"></i>
@@ -37,7 +37,7 @@
                                        maxlength="9" placeholder="Ingresa o escanea el código de barras" autofocus>
                                 <div class="input-group-append">
                                     <span wire:click="BuscarTicket()" class="input-group-text" style="cursor: pointer;">
-                                        <i class="la la-print la-lg"></i>
+                                        <i class="la la-print la-lg"></i>Registrar Salida
                                     </span>
                                 </div>
                             </div>

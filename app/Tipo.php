@@ -15,4 +15,9 @@ class Tipo extends Model
     {
         return $this->belongsTo(Cajon::class, 'tipo_id');
     }
+
+    public function tarifa()
+    {
+        return $this->belongsTo(Tarifa::class, 'tipo_id');
+    }
 }

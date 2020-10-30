@@ -112,6 +112,7 @@ class TiposController extends Component
             $tipo = Tipo::create([
                 'descripcion' => $this->descripcion
             ]);
+            //dd($this->image);
             if($this->image)
             {
                 $image = $this->image;

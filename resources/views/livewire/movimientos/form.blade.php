@@ -18,15 +18,17 @@
                     <label for="">Monto</label>
                     <input type="number" wire:model.lazy="monto" class="form-control text-center" placeholder="ej: 100.00">
                 </div>
-                <div class="form-group col-lg-4 col-md-4 col-sm-12">
-                    <label for="">Comprobante</label>
-                    <input id="image" type="file"
-                           wire:change="$emit('fileChoosen',this)" accept="image/x-png,image/gif,image/jpeg"
-                           class="form-control text-center">
+                <div class="form-group col-lg-3 col-md-3 col-sm-12">
+                    <label >Comprobante</label>
+                {{-- {{$image}} --}}
+                    <input type="file" class="form-control text-center" id="image"
+                           wire:change="$emit('fileChoosen',this)" accept="image/x-png, image/gif, image/jpeg"
+                    >
+
                 </div>
                 <div class="form-group col-lg-12 col-md-12 col-sm-12">
                     <label for="">Ingresa descripción</label>
-                    <input id="image" type="text" class="form-control" wire:model.lazy="concepto">
+                    <input id="concepto" type="text" class="form-control" wire:model.lazy="concepto">
                 </div>
             </div>
                 <div class="row">

@@ -401,8 +401,22 @@
         toastr.success(msgOK, "info")
      })
 
+     window.livewire.on('getin-ok', msgOK => {
+         toastr.success(msgOK, "info")
+     })
+
      window.livewire.on('msg-error', msgError => {
         toastr.error(msgError, "error")
+     })
+
+     window.livewire.on('getout-ok', msgInfo => {
+         toastr.success(msgInfo, "info")
+     })
+     window.livewire.on('getout-error', msgError => {
+         toastr.error(msgError, "error")
+     })
+     window.livewire.on('msg-ops', msgError => {
+         toastr.warning(msgError, "ops")
      })
 
  </script>

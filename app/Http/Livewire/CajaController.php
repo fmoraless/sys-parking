@@ -102,7 +102,8 @@ class CajaController extends Component
                'user_id' => Auth::user()->id  // auth()->user()->id
             ]);
             //comprobar si se está enmviando una imagen
-            if ($this->comprobante)
+            //dd($this->image);
+            if ($this->image)
             {
                 $image = $this->comprobante;
                 //separa el nombre del archivo y se le da un nombre unico
@@ -155,7 +156,8 @@ class CajaController extends Component
     ];
 
     public function handleFileUpload($imageData){
-        $this->comprobante = $imageData;
+        dd($imageData);
+        $this->image = $imageData;
     }
     public function destroy($id){
         if ($id){

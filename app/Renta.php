@@ -23,9 +23,14 @@ class Renta extends Model
         'vehiculo_id',
         'tarifa_id',
         'barcode',
-        'barcode',
         'estatus',
         'descripcion',
-
+        'cajon_id',
+        'direccion'
     ];
+
+    public function tarifa()
+    {
+        return $this->belongsTo(Tarifa::class);
+    }
 }
