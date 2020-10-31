@@ -29,3 +29,6 @@ Route::view('empresa','empresa');
 Route::view('usuarios','usuarios');
 Route::view('rentas','rentas');
 
+//rutas impresion
+Route::get('print/order/{id}','PrinterController@TicketVisita');
+Route::get('print/pension/{id}','PrinterController@TicketPension');
